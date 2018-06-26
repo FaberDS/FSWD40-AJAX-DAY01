@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<side>
+    <blog id="0001" >
+        <author>Mario</author>
+        <title>Green Flowers</title>
+        <txt>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est autem dolorem excepturi illum doloremque, assumenda fuga sint molestias similique laboriosam. Vel, modi sequi. Reiciendis consectetur consequuntur ad soluta, quod laudantium!</txt>
+    </blog>
+
+    <blog id="0002" >
+        <author>Denis</author>
+        <title>Bottle</title>
+        <txt>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est autem dolorem excepturi illum doloremque, assumenda fuga sint molestias similique laboriosam. Vel, modi sequi. Reiciendis consectetur consequuntur ad soluta, quod laudantium!</txt>
+    </blog>
+
+    <blog id="0003" >
+        <author>Patrick</author>
+        <title>HTML</title>
+        <txt>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est autem dolorem excepturi illum doloremque, assumenda fuga sint molestias similique laboriosam. Vel, modi sequi. Reiciendis consectetur consequuntur ad soluta, quod laudantium!</txt>
+    </blog>
+
+    <blog id="0004" >
+        <author>Anna</author>
+        <title>Neuseeland</title>
+        <txt>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est autem dolorem excepturi illum doloremque, assumenda fuga sint molestias similique laboriosam. Vel, modi sequi. Reiciendis consectetur consequuntur ad soluta, quod laudantium!</txt>
+    </blog>
+</side>
