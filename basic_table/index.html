@@ -35,12 +35,12 @@
 
     };
     function printData(xml){
-        var i;
+
         var xmlDoc = xml.responseXML;
         var table = "<table><tr><th>Author</th><th>Title</th><th>Blog</th></tr>";
         var blog = xmlDoc.getElementsByTagName("blog");
         console.log(blog);
-        for(i = 0; i < blog.length; i++){
+        for(var i = 0; i < blog.length; i++){
             table += "<tr><td>" +
                 blog[i].getElementsByTagName("author")[0].childNodes[0].nodeValue +
                 "</td><td>"+

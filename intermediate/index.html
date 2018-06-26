@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <style>
+        table,
+        th,
+        td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        }
+        th,
+        td {
+        padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Favorite Music</h1>
+    <button type="button" onclick="showContent()">Show our Music Favorite</button>
+    <button type="button" onclick="clearContent()">Hide our Music Favorite</button>
+    <div id="content"></div>
+    <script>
+        function showContent(){
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    printData(this);
+                }
+            };
+             xhttp.open("GET", "songs.xml", true);
+            xhttp.send();
+        };
+        function printData(xml){
+
+        var xmlDoc = xml.responseXML;
+        var table = "<table><tr><th>Title</th><th>Artist</th><th>Country</th><th>Company</th><th>Price</th><th>Year</th></tr>";
+        var blog = xmlDoc.getElementsByTagName("CD");
+        console.log(blog);
+        for(var i = 0; i < blog.length; i++){
+            table += "<tr><td>" +
+                blog[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+                "</td><td>"+
+                blog[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+                "</td><td>"+
+                blog[i].getElementsByTagName("COUNTRY")[0].childNodes[0].nodeValue +
+                "</td><td>"+
+                blog[i].getElementsByTagName("COMPANY")[0].childNodes[0].nodeValue +
+                "</td><td>"+
+                blog[i].getElementsByTagName("PRICE")[0].childNodes[0].nodeValue +
+                "</td><td>"+
+                blog[i].getElementsByTagName("YEAR")[0].childNodes[0].nodeValue +
+                "</td></tr>";
+        }
+        table += "</table>";
+        document.getElementById("content").innerHTML = table;
+    }
+        function clearContent(){
+            document.getElementById("content").innerHTML = "";
+        }
+        
+    
+    </script>
+</body>
+</html>
